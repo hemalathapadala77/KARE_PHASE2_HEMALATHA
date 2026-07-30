@@ -97,3 +97,18 @@ public class Main
         System.out.println("hello");
     }
 }
+
+
+
+
+import java.util.*;
+class Main
+{
+public static void main (String[] args) {
+    int a = 3;
+    if (a == 4)
+    System.out.print(a+5);
+    else
+    System.out.print(a-8);
+}
+}
