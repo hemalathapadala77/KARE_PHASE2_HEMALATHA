@@ -24,3 +24,18 @@ class Main
 	    System.out.println("Not eligible to vote");
 	}
 }
+
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a,b;
+	    a = obj.nextInt();
+	    b = obj.nextInt();
+	    if(a==b)
+	    System.out.println(a+"AND" +b+"ARE EQUAL");
+	    else
+	    System.out.println(a+"AND" +b+"ARE NOT EQUAL");
+	}
+}
