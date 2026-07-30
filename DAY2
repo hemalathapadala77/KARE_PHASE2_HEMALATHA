@@ -11,3 +11,16 @@ public class Main
 	    System.out.println("odd");
 	}
 }
+
+import java.util.*;
+class Main
+{
+	public static void main(String[] args) {
+	    Scanner obj = new Scanner(System.in);
+	    int a = obj.nextInt();
+	    if(a>=18)
+	    System.out.println("Eligible to vote");
+	    else
+	    System.out.println("Not eligible to vote");
+	}
+}
