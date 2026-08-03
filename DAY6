@@ -72,3 +72,24 @@ class Main{
     }
     
 }
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int temp = n;
+        int sqr=n*n;
+        int sum=0;
+        while(sqr !=0)
+        {
+            sum = sum+sqr%10;
+            sqr=sqr/10;
+        }
+        if(sum == 0)
+        System.out.println("NEON NUMBER");
+        else
+        System.out.println("NOT A NEON NUMBER");
+    }
+    
+}
