@@ -50,3 +50,25 @@ public class Main
 		System.out.println("no.of digits : " +c);
 	}
 }
+
+
+import java.util.*;
+class Main{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int sum = 0,d;
+        int temp = n;
+        while(n!=0)
+        {
+            d=n%10;//1%10=1
+            sum=sum+d;//8+1=9
+            n=n/10;//1/10=0
+        }
+        if(temp % sum == 0)
+        System.out.println("HARSHAD NUMBER");
+        else
+        System.out.println("NOT A HARSHAD NUMBER");
+    }
+    
+}
