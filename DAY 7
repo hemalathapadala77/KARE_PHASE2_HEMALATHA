@@ -76,3 +76,29 @@ class Main
         System.out.print("Not an Adam Number");
     }
 }
+
+
+import java.util.*;
+class Main 
+{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n1 = obj.nextInt();
+        int n2 = obj.nextInt();
+        int s1=0,s2=0;
+        for(int i=1; i<=n1/2; i++)
+        {
+            if(n1%i==0)
+            s1=s1+i;
+        }
+        for(int i=1;i<=n2/2; i++)
+        {
+            if(n2%i==0)
+            s2=s2+i;
+        }
+        if(s1==n2 && s2==n1)
+        System.out.print("Amicable Pair");
+        else
+        System.out.print("Not an Amicable Pair");
+    }
+}
