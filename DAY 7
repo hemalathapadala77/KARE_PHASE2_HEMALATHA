@@ -20,3 +20,59 @@ class Main{
         System.out.print("Not a Strong Number");
     }
 }
+
+
+import java.util.*;
+class Main{
+    public static void main (String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int temp=n;
+        int d,sum=0,c=0;
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+        n=temp;
+        while(n!=0)
+        {
+            d=n%10;
+            sum=sum+(int)Math.pow(d,c);
+            n=n/10;
+        }
+        if(temp==sum)
+        System.out.println("ARMSTRONG NUMBER");
+        else
+        System.out.println("NOT AN ARMSTRONG NUMBER");
+    }
+    
+}
+
+import java.util.*;
+class Main
+{
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int n = obj.nextInt();
+        int sn = n*n;
+        int rn = 0,d,ans=0;
+        while(n!=0)
+        {
+            d = n%10;
+            rn = rn*10+d;
+            n = n/10;
+        }
+        int srn = rn*rn;
+        while(srn!=0)
+        {
+            d = srn % 10;
+            ans = ans*10+d;
+            srn=srn/10;
+        }
+        if (ans == sn)
+        System.out.print("Adam Number");
+        else
+        System.out.print("Not an Adam Number");
+    }
+}
