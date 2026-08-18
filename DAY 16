@@ -1,0 +1,228 @@
+Write a Java program to find the sum of all elements in a doubly linked list.
+
+Program:
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+        Node(int d) { data = d; }
+    }
+
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+
+
+        a.next = b;
+        b.prev = a;
+        b.next = c;
+        c.prev = b;
+
+
+        int sum = 0;
+        while (a != null) {
+            sum += a.data;
+            a = a.next;
+        }
+
+
+        System.out.println("Sum = " + sum);
+    }
+}
+
+Input:
+
+10 20 30
+
+Output:
+
+Sum = 60
+
+
+2) Write a Java program to find the maximum element in a doubly linked list.
+
+Program:
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+        Node(int d) { data = d; }
+    }
+
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(50);
+        Node c = new Node(30);
+
+
+        a.next = b;
+        b.prev = a;
+        b.next = c;
+        c.prev = b;
+
+
+        int max = a.data;
+
+
+        while (a != null) {
+            if (a.data > max)
+                max = a.data;
+            a = a.next;
+        }
+
+
+        System.out.println("Maximum = " + max);
+    }
+}
+
+Input:
+
+10 50 30
+
+Output:
+
+Maximum = 50
+
+
+3) Print Elements in Reverse Order
+
+Question:
+Write a Java program to print the elements of a doubly linked list in reverse order.
+
+Program:
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+        Node(int d) { data = d; }
+    }
+
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+        Node c = new Node(30);
+
+
+        a.next = b;
+        b.prev = a;
+        b.next = c;
+        c.prev = b;
+
+
+        while (c != null) {
+            System.out.print(c.data + " ");
+            c = c.prev;
+        }
+    }
+}
+
+Input:
+
+10 20 30
+
+Output:
+
+30 20 10
+
+
+4) Sort the Doubly Linked List
+
+Question:
+Write a Java program to sort the elements of a doubly linked list in ascending order.
+
+Program:
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+        Node(int d) { data = d; }
+    }
+
+
+    public static void main(String[] args) {
+        Node a = new Node(30);
+        Node b = new Node(10);
+        Node c = new Node(20);
+
+
+        a.next = b;
+        b.prev = a;
+        b.next = c;
+        c.prev = b;
+
+
+        for (Node i = a; i != null; i = i.next)
+            for (Node j = i.next; j != null; j = j.next)
+                if (i.data > j.data) {
+                    int t = i.data;
+                    i.data = j.data;
+                    j.data = t;
+                }
+
+
+        for (Node i = a; i != null; i = i.next)
+            System.out.print(i.data + " ");
+    }
+}
+
+Input:
+
+30 10 20
+
+Output:
+
+10 20 30
+
+
+5) Insert Element in Doubly Linked List
+
+Question:
+Write a Java program to insert an element at the end of a doubly linked list.
+
+Program:
+
+class Main {
+    static class Node {
+        int data;
+        Node prev, next;
+        Node(int d) { data = d; }
+    }
+
+
+    public static void main(String[] args) {
+        Node a = new Node(10);
+        Node b = new Node(20);
+
+
+        a.next = b;
+        b.prev = a;
+
+
+        Node c = new Node(30);
+
+
+        b.next = c;
+        c.prev = b;
+
+
+        for (Node i = a; i != null; i = i.next)
+            System.out.print(i.data + " ");
+    }
+}
+
+Input:
+
+10 20
+Insert: 30
+
+Output:
+
+10 20 30
