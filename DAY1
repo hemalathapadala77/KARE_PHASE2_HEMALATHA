@@ -1,6 +1,61 @@
+1.// PRINTING NAME:
 public class Main
 {
 	public static void main(String[] args) {
 		System.out.println("cse \"KARE\" students");
 	}
 }
+OUTPUT:
+cse "KARE" students
+
+
+
+2.
+// output should print as \n
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.print("\\n");
+	}
+}
+
+Output:
+\n
+
+3.
+// Take the input from the user and the print the same number
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		System.out.println(n);
+	}
+}
+
+Output:
+Enter the number
+10
+10
+
+.
+4.// program to get a float value from the user and print the float number
+
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the float digit");
+        float a = sc.nextFloat();
+        System.out.println("the entered Float number is "+ a);
+        
+    }
+}
+
+Output:
+Enter the float digit
+5.666
+the entered Float number is 5.666
