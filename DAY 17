@@ -375,7 +375,7 @@ Output:
 
 
 
-1. Sum of Elements
+6. Sum of Elements
 
 Write a Java program to find the sum of all elements in a Doubly Linked List.
 
@@ -442,7 +442,7 @@ Output:
 Sum = 150
 
 
-2. Sort Elements
+7. Sort Elements
 
 
 Write a Java program to sort the elements of a Doubly Linked List in ascending order.
@@ -517,7 +517,7 @@ Output:
 10 20 30 40 50
 
 
-3. Maximum Element
+8. Maximum Element
 
 Write a Java program to find the maximum element in a Doubly Linked List.
 
@@ -587,7 +587,7 @@ Output:
 Maximum = 80
 
 
-4. Insert Element
+9. Insert Element
 
 
 Write a Java program to insert an element at the end of a Doubly Linked List.
@@ -663,7 +663,7 @@ Output:
 10 20 30 40 50
 
 
-5. Reverse Elements
+10. Reverse Elements
 
 
 Write a Java program to reverse the elements of a Doubly Linked List.
