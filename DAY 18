@@ -223,3 +223,179 @@ class Main{
         }
     }
 }
+
+
+Write a Java program to implement a Queue using an Array and perform Enqueue, Dequeue, and Display operations.
+
+Program
+import java.util.*;
+
+
+class Main {
+    static int queue[];
+    static int front = -1, rear = -1;
+    static int size;
+
+
+    static void enqueue(int x) {
+        if (rear == size - 1) {
+            System.out.println("Queue Overflow");
+        } else {
+            if (front == -1)
+                front = 0;
+            queue[++rear] = x;
+        }
+    }
+
+
+    static void dequeue() {
+        if (front == -1 || front > rear) {
+            System.out.println("Queue Underflow");
+        } else {
+            System.out.println("Deleted: " + queue[front++]);
+        }
+    }
+
+
+    static void display() {
+        if (front == -1 || front > rear) {
+            System.out.println("Queue is empty");
+        } else {
+            for (int i = front; i <= rear; i++)
+                System.out.print(queue[i] + " ");
+            System.out.println();
+        }
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        size = sc.nextInt();
+        queue = new int[size];
+
+
+        for (int i = 0; i < size; i++)
+            enqueue(sc.nextInt());
+
+
+        System.out.println("Queue:");
+        display();
+
+
+        dequeue();
+
+
+        System.out.println("After Dequeue:");
+        display();
+    }
+}
+Input
+5
+10 20 30 40 50
+Output
+Queue:
+10 20 30 40 50
+Deleted: 10
+After Dequeue:
+20 30 40 50
+
+
+Write a Java program to implement a Queue using a Linked List and perform Enqueue, Dequeue, and Display operations.
+
+Program
+import java.util.*;
+
+
+class Main {
+
+
+    static class Node {
+        int data;
+        Node next;
+
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+
+    static Node front = null;
+    static Node rear = null;
+
+
+    static void enqueue(int x) {
+        Node newNode = new Node(x);
+
+
+        if (rear == null) {
+            front = rear = newNode;
+        } else {
+            rear.next = newNode;
+            rear = newNode;
+        }
+    }
+
+
+    static void dequeue() {
+        if (front == null) {
+            System.out.println("Queue Underflow");
+        } else {
+            System.out.println("Deleted: " + front.data);
+            front = front.next;
+
+
+            if (front == null)
+                rear = null;
+        }
+    }
+
+
+    static void display() {
+        Node temp = front;
+
+
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+
+
+        System.out.println();
+    }
+
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        int n = sc.nextInt();
+
+
+        for (int i = 0; i < n; i++)
+            enqueue(sc.nextInt());
+
+
+        System.out.println("Queue:");
+        display();
+
+
+        dequeue();
+
+
+        System.out.println("After Dequeue:");
+        display();
+    }
+}
+Input
+5
+10 20 30 40 50
+Output
+Queue:
+10 20 30 40 50
+Deleted: 10
+After Dequeue:
+20 30 40 50
